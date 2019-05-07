@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title> BetEfrei </title>
+</head>
+<body>
+
+    <h1 class="alltitle"> TP 1 </h1>
+    <p> <strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </strong> Aenean imperdiet placerat est ac condimentum. 
+        accumsan lectus a nibh scelerisque venenatis. In in efficitur justo.<br>
+        Quisque vel nulla et nibh gravida egestas. 
+        Pellentesque lobortis interdum magna vel vulputate. Etiam facilisis vulputate pharetra. Cras eu massa urna.
+    </p>
+
+    <h2 id="h2title" class="alltitle"> Paragraphe 2 </h2>
+    <p id="p2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet placerat est ac condimentum. 
+        accumsan lectus a nibh scelerisque venenatis. In in efficitur justo.
+        Quisque vel nulla et nibh gravida egestas. 
+        Pellentesque lobortis interdum magna vel vulputate. Etiam facilisis vulputate pharetra. Cras eu massa urna.
+    </p>
+
+    <ul class="fav_film">
+        <li class="fav_film_li"> Invictus </li>
+        <li class="fav_film_li"> Mad Max Fury Road </li>
+        <li class="fav_film_li"> Coldwater </li>
+    </ul>
+
+</body>
+
+<style>
+
+    .fav_film_li {
+        display: inline;
+        border: 1px solid;
+        border-radius: 10px;
+    }
+
+    li:before {
+        content: ">";
+    }
+
+    li:hover {
+        cursor: pointer;
+        background-color: rgb(243, 97, 97);
+    }
+
+    .fav_film {
+        list-style-type: decimal;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        color: rgb(68, 68, 218)
+    }
+    
+    .alltitle {
+        border-bottom: 2px dashed;
+    }
+
+    p {
+       background-color: rgb(243, 97, 97);
+    }
+
+    #p2 {
+        border: 2px solid; 
+    }
+
+    #h2title {
+        text-shadow: 2px 2px 2px grey;
+    }
+
+</style>
+
+</html>
