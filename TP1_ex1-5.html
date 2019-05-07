@@ -22,16 +22,32 @@
     </p>
 
     <ul class="fav_film">
-        <li> Invictus </li>
-        <li> Mad Max Fury Road </li>
-        <li> Coldwater </li>
+        <li class="fav_film_li"> Invictus </li>
+        <li class="fav_film_li"> Mad Max Fury Road </li>
+        <li class="fav_film_li"> Coldwater </li>
     </ul>
 
 </body>
 
 <style>
 
+    .fav_film_li {
+        display: inline;
+        border: 1px solid;
+        border-radius: 10px;
+    }
+
+    li:before {
+        content: ">";
+    }
+
+    li:hover {
+        cursor: pointer;
+        background-color: rgb(243, 97, 97);
+    }
+
     .fav_film {
+        list-style-type: decimal;
         font-size: 20px;
         font-family: 'Times New Roman', Times, serif;
         font-style: italic;
@@ -41,6 +57,7 @@
     .alltitle {
         border-bottom: 2px dashed;
     }
+
     p {
        background-color: rgb(243, 97, 97);
     }
