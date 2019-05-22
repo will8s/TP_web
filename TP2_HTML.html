@@ -10,60 +10,43 @@
 	<div class="div_form">
 		<form action="TP2_HTML_submit" method="post" accept-charset="utf-8">	
 			<div>
-        		<input type="text" id="Prénom" name="Prénom" placeholder="prenom" required>
+        		<input type="text" id="prénom" name="prénom" placeholder="prenom" required> 
 			</div>
 			<div>
-        		<input type="text" id="Nom" name="Nom" placeholder="nom" required>
+        		<input type="text" id="nom" name="nom" placeholder="nom" required>
 
 			</div>
 			<div>
-        		<input type="email" id="mail" name="user_mail" placeholder="X@gmail.com" required>
+        		<input type="email" id="mail" name="mail" placeholder="X@gmail.com" required>
 			</div>
 			<div>
 				<select>
-					<optgroup label="rôles" >
-						<option value="enseignant">Enseignant</option>
-						<option value="étudiant">Etudiant</option>
+					<optgroup label="roles" name ="role" >
+						<option name="enseignant" id="enseignant" value="enseignant">Enseignant</option>
+						<option name="etudiant" id="etudiant" value="etudiant">Etudiant</option>
 					</optgroup>
 			    </select>
 			</div>
 
 			<div class="button">
-				<button type="button">Tout supprimer</button>
-				<button type="button">Ajouter</button>
+				<button type="button" onclick="ajouter(); return false; ">Ajouter</button>
+				<button type="button" onclick="supprimer(); return false; ">Tout supprimer</button>
 			</div>
 		</form>
 	</div>
 
-	<div class="table">
+	<div class="table" >
 		<table>
 			<thead>
 				<tr>
-					<th class ="Prenom">Prenom</th>
-					<th class = "nom">nom</th>
-					<th class = "mail">mail</th>
-					<th class = "rôle">rôle</th>
+					<th class ="Prenom" name="prenom">Prenom</th>
+					<th class = "nom" name="nom">nom</th>
+					<th class = "mail" name="mail">mail</th>
+					<th class = "role" name="role">role</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr class ="">
-					<td class = "Prenom" ></td>
-					<td class = "nom"></td>
-					<td class = "mail"></td>
-					<td class = "rôle"></td>
-				</tr>
-				<tr class="">
-					<td class = "Prenom" ></td>
-					<td class = "nom"></td>
-					<td class = "mail"></td>
-					<td class = "rôle"></td>
-				</tr>
-				<tr class="">
-					<td class = "Prenom" ></td>
-					<td class = "nom"></td>
-					<td class = "mail"></td>
-					<td class = "rôle"></td>
-				</tr>
+			<tbody id="tab1">
+				
 			</tbody>
 		</table>
 	</div>
@@ -73,10 +56,10 @@
 		<table>
 			<thead>
 				<tr>
-					<th class ="Prenom">Prenom</th>
-					<th class = "nom">nom</th>
-					<th class = "mail">mail</th>
-					<th class = "rôle">rôle</th>
+					<th class ="Prenom" name="prenom">Prenom</th>
+					<th class = "nom" name="nom">nom</th>
+					<th class = "mail" name="mail">mail</th>
+					<th class = "role" name="role">role</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -84,20 +67,9 @@
 					<td class = "Prenom" ></td>
 					<td class = "nom"></td>
 					<td class = "mail"></td>
-					<td class = "rôle"></td>
+					<td class = "role"></td>
 				</tr>
-				<tr class="">
-					<td class = "Prenom" ></td>
-					<td class = "nom"></td>
-					<td class = "mail"></td>
-					<td class = "rôle"></td>
-				</tr>
-				<tr class="">
-					<td class = "Prenom" ></td>
-					<td class = "nom"></td>
-					<td class = "mail"></td>
-					<td class = "rôle"></td>
-				</tr>
+				
 			</tbody>
 		</table>
 	</div>
@@ -106,6 +78,42 @@
 	
 </footer>
 </html>
+
+<script>
+	function ajouter(){
+	
+	var prenom = document.querySelector("[name=prénom]").value;
+	var nom = document.querySelector("[name=nom]").value;
+	var email = document.querySelector("[name=mail]").value;
+	var role = document.querySelector("[name=role]").value;//cela risque de ne pas fonctionner car on utilise une liste et non un input
+	
+
+	var table = document.getElementById("tab1");
+
+	var row = document.createElement("tr");
+	row.classList.add("row");
+	var tdprenom = document.createElement("td");
+	tdprenom.textContent = prenom;
+	var tdnom = document.createElement("td");
+	tdnom.textContent = nom;
+	var tdemail = document.createElement("td");
+	tdemail.textContent = email;
+	var tdrole = document.createElement("td");
+	tdrole.textContent = role;
+
+	row.appendChild(tdprenom);
+	row.appendChild(tdnom);
+	row.appendChild(tdemail);
+	row.appendChild(tdrole);
+
+	table.appendChild(row);
+	}
+
+	function supprimer(){
+
+		
+	}
+</script>		
 
 <style>
 	*{
@@ -174,6 +182,9 @@
 	}
 	
 	th,td{border-bottom: 1px solid lightgrey;}
-	tr {box-shadow: 0px 0px 1px #B2B2B2FF;}
-	th{width: 250px;height: 25px;}
+	tr {box-shadow: 0px 0px 1px #B2B2B2FF;max-width:1000px;}
+	thead{max-width:1000px;}
+	tbody{max-width:1000px;}
+	td{padding: 2px 4px 2px 4px;width: 250px;max-width:250px;}
+	th{width: 250px;max-width:250px;height: 25px;}
 </style>
