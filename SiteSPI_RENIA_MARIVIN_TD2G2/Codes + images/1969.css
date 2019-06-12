@@ -1,0 +1,60 @@
+/* GENERAL */
+body{
+	background-color:black; 
+	color:white; 	
+}
+H1{
+	color:#B8860B;
+	text-align:center;
+	font-size:60px;
+	font-family: Impact;
+	letter-spacing:3px;
+}
+
+#RETOUR{
+text-align:center;
+font-size:45px;
+}
+
+/* LES IMAGES  */
+#IMAGE{
+	float : left;
+}
+
+#IMAGE1{
+	 left:700px;
+	 top:1050px;
+	 position:absolute;
+}
+#IMAGE2{
+	left:100px;
+	top:1150px;
+	position:absolute;
+}
+#IMAGE3{
+	 left:1300px;
+	 top:1150px;
+	 position:absolute;
+}
+
+#LEGENDE{
+	color:grey;
+	font-size:22px;
+}
+#FICHE{
+	font-size:25px;	
+}
+
+/* CLASSEMENT */
+#CLASSEMENT{
+	text-align:center;
+	color:white;
+	font-size:30px;
+}
+
+/* LISTES */
+ul{
+	list-style:circle;
+	list-style-position:inside;
+	text-align:left;
+}

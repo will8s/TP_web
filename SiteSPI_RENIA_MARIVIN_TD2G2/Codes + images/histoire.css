@@ -1,0 +1,28 @@
+body{
+	background-color:black; 
+	color:white;
+}
+H1{
+	color:#B8860B;
+	text-align:center;
+	font-size:60px;
+	font-family: Impact;
+	letter-spacing:3px;
+}
+
+#IMAGE1{
+	float : left;
+}
+
+#TEXTE{
+	font-size:25px;
+}
+
+H2{
+	text-align:center;
+}
+
+#RETOUR{
+text-align:right;
+font-size:45px;
+}
